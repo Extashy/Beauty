@@ -1,0 +1,448 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и ol, у которых есть атрибут class */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not[class] {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article */
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@font-face { 
+    font-family: "Roboto-Regular"; 
+    src: url("./fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 400;
+  }
+
+* {
+	font-family: "Roboto-Regular";
+}
+
+/* HEADER */
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.Header__navigation {
+    background: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+.Header__navigation-link {
+    margin: 17px 30px 16px 0;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.Header__info {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header__logo-name {
+    width: 158px;
+    height: 39px;
+    color: #66C05D;
+    font-weight: 700;
+    font-size: 36px;
+    margin: 0 0 15px 20px;
+    white-space: nowrap;
+}
+
+.Header__phone-number {
+    margin-left: 515px;
+    white-space: nowrap;
+}
+
+.Header__phone-number > a {
+    color: #000000;
+}
+
+.Header__button {
+    margin-left: 40px;
+}
+
+button {
+    width: 170px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 2px solid #66C05D;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #000000;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.Header__options {
+    display: flex;
+    justify-content: center;
+}
+
+.Header__options-link {
+    margin-right: 40px;
+}
+
+.Header__options-link > a {
+    color: #000000;
+}
+
+/* SECTION */
+
+.Showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+.Showcase__product-screen {
+    background-image: url(./img/Product_screen.png);
+    width: 100%;
+    height: 604px;
+    display: flex;
+}
+
+.Showcase__product-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15%;
+}
+
+.Showcase__product-description > h2 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.Showcase__product-description > p {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.Showcase__product-description > button {
+    width: 170px;
+    height: 40px;
+    background: #66C05D;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.Showcase__product-info {
+    background: #EFEFEF;
+}
+
+.Showcase__product-catalogue-index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.Showcase__product-catalogue-index > h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+}
+
+.Showcase__delivery-logo {
+    width: 180px;
+    height: 135px;
+    margin-left: 556px;
+}
+
+.Showcase__product-catalogue-index > img {
+    width: auto;
+    height: 100%;
+}
+
+.Showcase__product-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Showcase__product-card {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    height: 363px;
+    margin-bottom: 100px;
+    background: #FFFFFF;
+    margin-right: 30px;
+}
+
+.Showcase__product-card:last-child {
+    margin-right: 0px;
+}
+
+.Showcase__product-card > p {
+    color: #333333;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Showcase__product-card > img {
+    width: 125px;
+    height: 166px;
+    margin: 25px 65px 20px 65px;
+}
+
+.Showcase__product-card-button {
+    justify-content: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    width: 130px;
+    height: 35px;
+    background: #66C05D;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.Showcase__product-card_button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.Showcase__product-card_price {
+    font-size: 21px;
+    font-weight: bolder;
+}
+
+.Showcase__touch-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 133px;
+}
+
+.Showcase__touch-card-mailing {
+    display: flex;
+    flex-direction: row;
+    width: 540px;
+    height: 212px;
+    background-color: #66C05D;
+}
+
+.Showcase__touch-card-mailing_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    width: 250px;
+}
+
+.Showcase__touch-card-mailing_card > h4 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.Showcase__touch-card-mailing_card > p {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.Showcase__touch-card-mailing_card > input {
+    width: 225px;
+    height: 35px;
+    border-radius: 30px;
+    border-style: none;
+}
+
+.Showcase__touch-card-mailing_card > input::placeholder {
+    padding-left: 25px;
+    font-size: 14px;
+    color: #C4C4C4;
+}
+
+.Showcase__touch-card-mailing_image {
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    height: 106px;
+    margin: 52px 0 0 84px;
+}
+
+.Showcase__touch-card-map {
+    width: 540px;
+    height: 212px;
+    background-color: #66C05D;
+    margin-left: 30px;
+}
+
+.Showcase__touch-card-map > h4 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.Showcase__touch-card-map > p {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.Showcase__touch-card-map > h4 {
+    margin: 35px 0 25px 40px;
+}
+
+.Showcase__touch-card-map > p {
+    margin: 0 0 25px 40px;
+}
+
+.Showcase__touch-card-button {
+    width: 170px;
+    height: 35px;
+    margin-left: 40px;
+    background: #66C05D;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/* FOOTER */
+
+.Footer__touch-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.Footer__touch-section_socials {
+    display: flex;
+    flex-direction: row;
+}
+
+.Footer__touch-section_socials > a {
+    margin-left: 20px;
+}
+
+.Footer__touch-section > p {
+    font-size: 14px;
+    color:#000000;
+    margin-left: 205px;
+}
+
+.Footer__touch-section > a {
+    margin-left: 105px;
+    font-size: 16px;
+    color:#000000;
+}
+
+.Footer__touch-section_button {
+    margin-left: 40px;
+    font-size: 14px;
+    color:#000000;
+}
+
+.Footer__policy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    background: #EFEFEF;
+}
+
+.Footer__policy > p {
+    font-size: 12px;
+    color: #828282;
+}
+
+.Footer__policy > a {
+    font-size: 12px;
+    color: #828282;
+    margin-left: 345px;
+}
